@@ -18,7 +18,8 @@ class AttrDisplay:
 
     def __repr__(self):
         return '[%s: %s]' % (self.__class__.__name__, self.gatherAttrs())
-if __name__ == "main":
+
+if __name__ == '__main__':
 
     class TopTest(AttrDisplay):
         count = 0
@@ -30,6 +31,7 @@ if __name__ == "main":
     class SubTest(TopTest):
         pass
 
-    X, Y = TopTest(), SubTest()
+    X = TopTest()
+    Y = SubTest()
     print(X)
     print(Y)
